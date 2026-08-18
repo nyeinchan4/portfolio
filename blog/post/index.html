@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Blog Post — Nyein Chan</title>
+  <meta name="description" id="page-desc" content="Technical article by Nyein Chan, DevOps Engineer.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- marked.js CDN — renders Markdown to HTML in the browser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="/assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-surface border-b border-outline-variant w-full">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile h-16">
+      <a href="/" class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary hover:opacity-80 transition-opacity">Nyein Chan</a>
+      <div class="hidden md:flex space-x-gutter items-center">
+        <a href="/" class="nav-link text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors pb-1">Home</a>
+        <a href="/projects/" class="nav-link text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors pb-1">Projects</a>
+        <a href="/blog/" class="text-body-md font-body-md text-primary border-b-2 border-primary pb-1">Blog</a>
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="ml-4 px-4 py-2 bg-primary text-on-primary text-label-code font-label-code rounded hover:bg-secondary transition-colors flex items-center gap-2">
+          <span class="material-symbols-outlined" style="font-size:16px;">description</span>Resume
+        </a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-primary p-2">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant bg-surface px-margin-mobile pb-4 space-y-3 pt-3">
+      <a href="/" class="block text-body-md font-body-md text-on-surface-variant hover:text-primary">Home</a>
+      <a href="/projects/" class="block text-body-md font-body-md text-on-surface-variant hover:text-primary">Projects</a>
+      <a href="/blog/" class="block text-body-md font-body-md text-primary font-semibold">Blog</a>
+    </div>
+  </nav>
+
+  <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile py-section-gap">
+
+    <!-- Back link -->
+    <a href="/blog/" class="inline-flex items-center gap-1 text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors mb-8 group">
+      <span class="material-symbols-outlined text-[16px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+      Back to Blog
+    </a>
+
+    <!-- Loading state -->
+    <div id="loading" class="text-center py-20">
+      <span class="material-symbols-outlined text-4xl text-outline-variant animate-spin" style="display:inline-block;">progress_activity</span>
+      <p class="text-body-md font-body-md text-on-surface-variant mt-4">Loading article…</p>
+    </div>
+
+    <!-- Error state -->
+    <div id="error-state" class="hidden text-center py-20">
+      <span class="material-symbols-outlined text-4xl text-outline-variant">error</span>
+      <p class="text-headline-sm font-headline-sm text-primary mt-4">Post not found</p>
+      <p class="text-body-md font-body-md text-on-surface-variant mt-2">The article you're looking for doesn't exist or has been moved.</p>
+      <a href="/blog/" class="inline-flex items-center gap-2 mt-6 px-4 py-2 bg-primary text-on-primary text-label-code font-label-code rounded hover:bg-secondary transition-colors">
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>View all posts
+      </a>
+    </div>
+
+    <!-- Post content -->
+    <article id="post-container" class="hidden max-w-3xl">
+      <!-- Post meta -->
+      <header class="mb-8">
+        <div id="post-tags" class="flex flex-wrap gap-2 mb-4"></div>
+        <h1 id="post-title" class="text-display-lg font-display-lg text-primary mb-4 leading-tight"></h1>
+        <div class="flex items-center gap-4 text-label-code font-label-code text-on-surface-variant">
+          <span class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+            <span id="post-date"></span>
+          </span>
+          <span class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">schedule</span>
+            <span id="post-read-time"></span>
+          </span>
+        </div>
+      </header>
+
+      <div class="section-divider"></div>
+
+      <!-- Rendered Markdown -->
+      <div id="post-body" class="prose mt-8"></div>
+
+      <!-- Footer CTA -->
+      <div class="mt-16 pt-8 border-t border-outline-variant">
+        <a href="/blog/" class="inline-flex items-center gap-2 text-label-code font-label-code text-secondary hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span>All Articles
+        </a>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-primary w-full mt-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md max-w-container-max mx-auto px-margin-mobile py-12">
+      <div>
+        <p class="text-body-lg font-headline-sm font-semibold text-primary mb-2">Nyein Chan</p>
+        <p class="text-body-md font-body-md text-on-surface opacity-80">© 2024 Nyein Chan. DevOps Engineer. Built with Precision.</p>
+      </div>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end items-center">
+        <a href="https://linkedin.com/in/nyein-chan-528758284" target="_blank" rel="noopener" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">LinkedIn</a>
+        <a href="https://github.com/nyeinchan4" target="_blank" rel="noopener" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">GitHub</a>
+        <a href="mailto:mrnyeinchan55@gmail.com" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // ── Blog post loader ──────────────────────────────────────────────
+    // Reads ?slug=<name> from URL, fetches /blog/posts/<slug>.md from S3/CDN,
+    // renders it with marked.js and injects into the page.
+
+    const params = new URLSearchParams(window.location.search);
+    const slug   = params.get('slug');
+
+    // Post metadata index (update when adding new posts)
+    const postIndex = {
+      'cicd-github-argocd': {
+        title:    'Implementing Seamless CI/CD with GitHub Actions & ArgoCD',
+        date:     'Oct 24, 2023',
+        tags:     ['CI/CD', 'Kubernetes'],
+      },
+      'eks-cloudformation': {
+        title:    'Managing EKS Clusters at Scale with CloudFormation',
+        date:     'Sep 12, 2023',
+        tags:     ['AWS', 'CloudFormation'],
+      },
+      'cloudwatch-ecs': {
+        title:    'Proactive Observability: CloudWatch Dashboards for ECS',
+        date:     'Aug 05, 2023',
+        tags:     ['Monitoring', 'AWS'],
+      },
+      'beanstalk-to-ecs': {
+        title:    'Migrating Legacy Apps: Elastic Beanstalk to ECS',
+        date:     'Jul 18, 2023',
+        tags:     ['Architecture', 'AWS'],
+      },
+      's3-cloudfront-portfolio': {
+        title:    'Hosting a Portfolio on S3 + CloudFront for Near-Zero Cost',
+        date:     'Aug 18, 2024',
+        tags:     ['AWS', 'Serverless'],
+      },
+    };
+
+    function estimateReadTime(text) {
+      const words = text.trim().split(/\s+/).length;
+      return Math.max(1, Math.round(words / 200)) + ' min read';
+    }
+
+    function renderTags(tags) {
+      return tags.map(t =>
+        `<span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">${t}</span>`
+      ).join('');
+    }
+
+    async function loadPost() {
+      if (!slug || !postIndex[slug]) {
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('error-state').classList.remove('hidden');
+        return;
+      }
+
+      try {
+        // Fetch .md file — works from S3/CloudFront (same origin)
+        const res = await fetch(`/blog/posts/${slug}.md`);
+        if (!res.ok) throw new Error('Not found');
+
+        const markdown = await res.text();
+        const meta     = postIndex[slug];
+
+        // Populate meta
+        document.getElementById('page-title').textContent = meta.title + ' — Nyein Chan';
+        document.getElementById('page-desc').content      = meta.title;
+        document.getElementById('post-title').textContent = meta.title;
+        document.getElementById('post-date').textContent  = meta.date;
+        document.getElementById('post-read-time').textContent = estimateReadTime(markdown);
+        document.getElementById('post-tags').innerHTML    = renderTags(meta.tags);
+
+        // Render markdown → HTML using marked.js
+        marked.setOptions({ breaks: true, gfm: true });
+        document.getElementById('post-body').innerHTML = marked.parse(markdown);
+
+        // Show post, hide loader
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('post-container').classList.remove('hidden');
+
+      } catch {
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('error-state').classList.remove('hidden');
+      }
+    }
+
+    loadPost();
+  </script>
+</body>
+</html>

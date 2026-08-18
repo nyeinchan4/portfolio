@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Nyein Chan</title>
+  <meta name="description" content="Technical articles on AWS, DevOps, CI/CD, and cloud infrastructure by Nyein Chan.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="/assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-surface border-b border-outline-variant w-full">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile h-16">
+      <a href="/" class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary hover:opacity-80 transition-opacity">Nyein Chan</a>
+      <div class="hidden md:flex space-x-gutter items-center">
+        <a href="/" class="nav-link text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors pb-1">Home</a>
+        <a href="/projects/" class="nav-link text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors pb-1">Projects</a>
+        <a href="/blog/" class="text-body-md font-body-md text-primary border-b-2 border-primary pb-1">Blog</a>
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="ml-4 px-4 py-2 bg-primary text-on-primary text-label-code font-label-code rounded hover:bg-secondary transition-colors flex items-center gap-2">
+          <span class="material-symbols-outlined" style="font-size:16px;">description</span>Resume
+        </a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-primary p-2" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant bg-surface px-margin-mobile pb-4 space-y-3 pt-3">
+      <a href="/" class="block text-body-md font-body-md text-on-surface-variant hover:text-primary">Home</a>
+      <a href="/projects/" class="block text-body-md font-body-md text-on-surface-variant hover:text-primary">Projects</a>
+      <a href="/blog/" class="block text-body-md font-body-md text-primary font-semibold">Blog</a>
+      <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-primary text-on-primary text-label-code font-label-code rounded hover:bg-secondary">Resume</a>
+    </div>
+  </nav>
+
+  <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile py-section-gap">
+    <!-- Header -->
+    <header class="mb-12">
+      <h1 class="text-display-lg font-display-lg text-primary mb-4">Knowledge Base</h1>
+      <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+        Technical articles, tutorials, and notes on cloud infrastructure, DevOps practices, and system architecture.
+      </p>
+    </header>
+
+    <!-- Filter tabs -->
+    <section>
+      <div class="flex items-center justify-between mb-2">
+        <h2 class="text-headline-sm font-headline-sm text-primary">Recent Posts</h2>
+        <div class="flex gap-2" id="filter-tabs">
+          <button data-filter="all" class="filter-btn px-3 py-1 bg-surface-container-low border border-surface-variant rounded text-label-code font-label-code text-primary transition-colors">All</button>
+          <button data-filter="AWS" class="filter-btn px-3 py-1 bg-surface-container-lowest border border-surface-variant rounded text-label-code font-label-code text-on-surface-variant hover:bg-surface-variant transition-colors">AWS</button>
+          <button data-filter="CI/CD" class="filter-btn px-3 py-1 bg-surface-container-lowest border border-surface-variant rounded text-label-code font-label-code text-on-surface-variant hover:bg-surface-variant transition-colors">CI/CD</button>
+          <button data-filter="Architecture" class="filter-btn px-3 py-1 bg-surface-container-lowest border border-surface-variant rounded text-label-code font-label-code text-on-surface-variant hover:bg-surface-variant transition-colors">Architecture</button>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+
+      <!-- Posts grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="posts-grid">
+
+        <article class="post-card bg-surface rounded-lg p-6 flex flex-col h-full cursor-pointer" data-tags="CI/CD"
+                 onclick="window.location='/blog/post/?slug=cicd-github-argocd'">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">CI/CD</span>
+            <span class="text-sm text-on-surface-variant">Oct 24, 2023</span>
+          </div>
+          <h3 class="text-headline-sm font-headline-sm text-primary mb-3 leading-tight">
+            Implementing Seamless CI/CD with GitHub Actions & ArgoCD
+          </h3>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">
+            A deep dive into setting up a GitOps delivery pipeline for automating deployments to Kubernetes, minimising configuration drift and enabling instant rollbacks.
+          </p>
+          <div class="flex items-center text-secondary font-label-code text-label-code mt-auto">
+            Read Article <span class="material-symbols-outlined ml-1" style="font-size:16px;">arrow_forward</span>
+          </div>
+        </article>
+
+        <article class="post-card bg-surface rounded-lg p-6 flex flex-col h-full cursor-pointer" data-tags="AWS"
+                 onclick="window.location='/blog/post/?slug=eks-cloudformation'">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">AWS</span>
+            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">CloudFormation</span>
+            <span class="text-sm text-on-surface-variant">Sep 12, 2023</span>
+          </div>
+          <h3 class="text-headline-sm font-headline-sm text-primary mb-3 leading-tight">
+            Managing EKS Clusters at Scale with CloudFormation
+          </h3>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">
+            Strategies for provisioning and managing complex AWS EKS configurations using CloudFormation nested stacks to standardise infrastructure across multiple environments.
+          </p>
+          <div class="flex items-center text-secondary font-label-code text-label-code mt-auto">
+            Read Article <span class="material-symbols-outlined ml-1" style="font-size:16px;">arrow_forward</span>
+          </div>
+        </article>
+
+        <article class="post-card bg-surface rounded-lg p-6 flex flex-col h-full cursor-pointer" data-tags="AWS"
+                 onclick="window.location='/blog/post/?slug=cloudwatch-ecs'">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">Monitoring</span>
+            <span class="text-sm text-on-surface-variant">Aug 05, 2023</span>
+          </div>
+          <h3 class="text-headline-sm font-headline-sm text-primary mb-3 leading-tight">
+            Proactive Observability: CloudWatch Dashboards for ECS
+          </h3>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">
+            How to leverage AWS CloudWatch and EventBridge to create actionable dashboards that alert on critical container metrics before system availability is impacted.
+          </p>
+          <div class="flex items-center text-secondary font-label-code text-label-code mt-auto">
+            Read Article <span class="material-symbols-outlined ml-1" style="font-size:16px;">arrow_forward</span>
+          </div>
+        </article>
+
+        <article class="post-card bg-surface rounded-lg p-6 flex flex-col h-full cursor-pointer" data-tags="Architecture"
+                 onclick="window.location='/blog/post/?slug=beanstalk-to-ecs'">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">Architecture</span>
+            <span class="text-sm text-on-surface-variant">Jul 18, 2023</span>
+          </div>
+          <h3 class="text-headline-sm font-headline-sm text-primary mb-3 leading-tight">
+            Migrating Legacy Apps: Elastic Beanstalk to ECS
+          </h3>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">
+            A retrospective on challenges and solutions encountered while migrating monolithic applications to containerised microservices to improve scalability and deployment efficiency.
+          </p>
+          <div class="flex items-center text-secondary font-label-code text-label-code mt-auto">
+            Read Article <span class="material-symbols-outlined ml-1" style="font-size:16px;">arrow_forward</span>
+          </div>
+        </article>
+
+        <article class="post-card bg-surface rounded-lg p-6 flex flex-col h-full cursor-pointer" data-tags="AWS"
+                 onclick="window.location='/blog/post/?slug=s3-cloudfront-portfolio'">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">AWS</span>
+            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-code text-primary">Serverless</span>
+            <span class="text-sm text-on-surface-variant">Aug 18, 2024</span>
+          </div>
+          <h3 class="text-headline-sm font-headline-sm text-primary mb-3 leading-tight">
+            Hosting a Portfolio on S3 + CloudFront for Near-Zero Cost
+          </h3>
+          <p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">
+            Step-by-step guide to deploying a static portfolio site using S3, CloudFront OAC, ACM, and GitHub Actions OIDC — the exact stack powering this site.
+          </p>
+          <div class="flex items-center text-secondary font-label-code text-label-code mt-auto">
+            Read Article <span class="material-symbols-outlined ml-1" style="font-size:16px;">arrow_forward</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-primary w-full mt-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md max-w-container-max mx-auto px-margin-mobile py-12">
+      <div>
+        <p class="text-body-lg font-headline-sm font-semibold text-primary mb-2">Nyein Chan</p>
+        <p class="text-body-md font-body-md text-on-surface opacity-80">© 2024 Nyein Chan. DevOps Engineer. Built with Precision.</p>
+      </div>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end items-center">
+        <a href="https://linkedin.com/in/nyein-chan-528758284" target="_blank" rel="noopener" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">LinkedIn</a>
+        <a href="https://github.com/nyeinchan4" target="_blank" rel="noopener" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">GitHub</a>
+        <a href="mailto:mrnyeinchan55@gmail.com" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Tag filter
+    const buttons = document.querySelectorAll('.filter-btn');
+    const posts   = document.querySelectorAll('#posts-grid article');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        // update active styles
+        buttons.forEach(b => {
+          b.classList.remove('bg-surface-container-low', 'text-primary');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-low', 'text-primary');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        // filter posts
+        posts.forEach(p => {
+          const tags = p.dataset.tags || '';
+          p.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

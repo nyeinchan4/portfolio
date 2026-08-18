@@ -1,0 +1,410 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nyein Chan - DevOps Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#76777d",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "primary-container": "#131b2e",
+                        "on-surface-variant": "#45464d",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "inverse-primary": "#bec6e0",
+                        "surface-tint": "#565e74",
+                        "tertiary-fixed": "#d3e4fe",
+                        "background": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "secondary": "#0058be",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-container": "#75859d",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "primary-fixed": "#dae2fd",
+                        "primary": "#000000",
+                        "secondary-container": "#2170e4",
+                        "tertiary": "#000000",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary-fixed": "#001a42",
+                        "surface-bright": "#f7f9fb",
+                        "surface-variant": "#e0e3e5",
+                        "outline-variant": "#c6c6cd",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "tertiary-container": "#0b1c30",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-container": "#fefcff",
+                        "on-background": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1120px",
+                        "stack-gap-md": "16px",
+                        "stack-gap-sm": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "headline-sm": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "label-code": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-code": ["14px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-surface');
+        }
+        .tech-chip {
+            background-color: theme('colors.surface-container-lowest');
+            border: 1px solid theme('colors.outline-variant');
+            transition: all 0.2s ease;
+        }
+        .tech-chip:hover {
+            background-color: theme('colors.surface-container-low');
+            border-color: theme('colors.primary');
+        }
+        .bento-card {
+            background-color: theme('colors.surface-container-lowest');
+            border: 1px solid theme('colors.outline-variant');
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            border-left: 3px solid theme('colors.secondary');
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .section-divider {
+            border-top: 1px solid theme('colors.primary');
+            margin-top: theme('spacing.stack-gap-md');
+            margin-bottom: theme('spacing.stack-gap-md');
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-on-surface-variant w-full">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile h-16">
+<a class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity" href="#">
+                Nyein Chan
+            </a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex space-x-gutter items-center">
+<a class="text-body-md font-body-md text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Home</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#experience">Project</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#skills">Blog</a>
+
+<a class="ml-4 px-4 py-2 bg-primary text-on-primary text-label-code font-label-code rounded hover:bg-secondary transition-colors scale-98 active:opacity-80" href="#">
+                    Resume
+                </a>
+</div>
+<!-- Mobile Menu Button (Placeholder) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">menu</span>
+</button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile pt-section-gap pb-section-gap">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center mb-section-gap">
+<div class="md:col-span-8 space-y-stack-gap-md">
+<div class="inline-flex items-center space-x-2 bg-surface-container px-3 py-1 rounded-full text-label-code font-label-code text-on-surface-variant border border-outline-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Available for new opportunities</span>
+</div>
+<h1 class="text-headline-lg-mobile md:text-display-lg font-headline-lg-mobile md:font-display-lg text-primary tracking-tight">
+                    DevOps Engineer building scalable, resilient infrastructure.
+                </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Results-oriented DevOps Engineer with 3 years of experience in managing cloud environments and deploying scalable applications. Migrated legacy systems to modern infrastructures, enhancing performance and reducing operational costs. Utilized monitoring tools for proactive resource management, improving infrastructure visibility and response times.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="inline-flex items-center space-x-2 text-body-md font-body-md text-primary hover:text-secondary transition-colors" href="mailto:mrnyeinchan55@gmail.com">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="">mrnyeinchan55@gmail.com</span>
+</a>
+<span class="hidden md:inline text-outline-variant">|</span>
+<a class="inline-flex items-center space-x-2 text-body-md font-body-md text-primary hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span>
+<span class="">linkedin.com/in/nyein-chan-528758284</span>
+</a>
+<span class="hidden md:inline text-outline-variant">|</span>
+<span class="inline-flex items-center space-x-2 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<span class="">Yangon, Myanmar</span>
+</span>
+</div>
+</div>
+<div class="md:col-span-4 flex justify-center md:justify-end">
+<div class="w-48 h-48 md:w-64 md:h-64 rounded bg-surface-container-high border border-outline-variant relative overflow-hidden group">
+<!-- Minimalist technical pattern background -->
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-50 group-hover:scale-110 transition-transform duration-500">terminal</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Skills Bento Grid -->
+<section class="mb-section-gap" id="skills">
+<h2 class="text-headline-md font-headline-md text-primary mb-2">Core Skills</h2>
+<div class="section-divider"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-gap-md">
+<!-- Cloud & Infrastructure -->
+<div class="bento-card p-6 rounded flex flex-col h-full">
+<div class="flex items-center space-x-3 mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">cloud</span>
+<h3 class="text-body-lg font-body-lg font-semibold">Cloud &amp; Infrastructure</h3>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AWS</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">EKS / ECS</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudFront</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">WAF</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ALB</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">RDS</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AKS</span>
+</div>
+</div>
+<!-- CI/CD & Automation -->
+<div class="bento-card p-6 rounded flex flex-col h-full">
+<div class="flex items-center space-x-3 mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">account_tree</span>
+<h3 class="text-body-lg font-body-lg font-semibold">CI/CD &amp; Automation</h3>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Terraform</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Ansible</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Docker</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Kubernetes</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">GitHub Actions</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AWS CodePipeline</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Scripting</span>
+</div>
+</div>
+<!-- Monitoring & Operations -->
+<div class="bento-card p-6 rounded flex flex-col h-full">
+<div class="flex items-center space-x-3 mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">monitoring</span>
+<h3 class="text-body-lg font-body-lg font-semibold">Monitoring &amp; Ops</h3>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">NewRelic</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ELK Stack</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudWatch</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Problem-solving</span>
+<span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Continuous Improvement</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Experience -->
+<section class="mb-section-gap" id="experience">
+<h2 class="text-headline-md font-headline-md text-primary mb-2">Professional Experience</h2>
+<div class="space-y-8 mt-6">
+<!-- City Mart -->
+<div>
+<div class="section-divider"></div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary font-bold">City Mart Holding Co., Ltd</h3>
+<p class="text-body-lg font-body-lg text-on-surface-variant italic">DevOps Engineer</p>
+</div>
+<span class="text-label-code font-label-code text-on-tertiary-container mt-2 md:mt-0 bg-surface-container px-3 py-1 rounded">2023/02 – present</span>
+</div>
+<ul class="space-y-stack-gap-sm text-body-md font-body-md text-on-surface">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span>
+<span class="">Designed and implemented <strong>CI/CD pipelines</strong> using <strong>AWS CodePipeline</strong> and <strong>GitHub Actions</strong>, accelerating release cycles and enhancing deployment reliability.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span>
+<span class="">Managed and optimized cloud infrastructure using AWS services including <strong>CloudFront, ECS, RDS</strong>, Auto Scaling, <strong>WAF</strong>, ElastiCache, Route 53, Athena, Systems Manager, and EventBridge.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span>
+<span class="">Migrated applications from Elastic Beanstalk to ECS, enhancing scalability and deployment efficiency while achieving <strong>99.99% system availability</strong> and <strong>continuous uptime</strong>.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span>
+<span class="">Automated scheduled Amazon <strong>RDS</strong> scaling using AWS EventBridge and <strong>Lambda</strong> to efficiently handle high-traffic periods and <strong>optimize</strong> database performance.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span>
+<span class="">Migrated Hybris <strong>SAP</strong> Commerce infrastructure from Azure Virtual Machines to Azure VM Scale Sets (<strong>VMSS</strong>), enabling <strong>auto-scaling</strong> and improving system reliability.</span>
+</li>
+</ul>
+</div>
+<!-- Intern -->
+<div>
+<div class="section-divider"></div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary font-bold">Ferry Management System</h3>
+<p class="text-body-lg font-body-lg text-on-surface-variant italic">Intern DevOps Engineer</p>
+</div>
+</div>
+<ul class="space-y-stack-gap-sm text-body-md font-body-md text-on-surface">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span>
+<span class="">Set up and configured infrastructure on Cloud platforms for the Ferry Management System.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span>
+<span class="">Utilized GitHub Actions for CI/ CD pipelines and managed server configuration.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Certifications & Projects Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-section-gap" id="projects">
+<!-- Projects -->
+<div>
+<h2 class="text-headline-md font-headline-md text-primary mb-2">Notable Projects</h2>
+<div class="section-divider"></div>
+<div class="bento-card p-6 rounded h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-body-lg font-body-lg font-bold text-primary">Lumina – Cloud-Native GitOps Project</h3>
+<a class="text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+</a>
+</div>
+<ul class="space-y-3 text-body-md font-body-md text-on-surface mb-6">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span>
+<span class=""><strong>Infrastructure as Code:</strong> Provisioned a production-ready AWS environment (VPC, EKS, RDS) using <strong>Terraform modules</strong>.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span>
+<span class=""><strong>GitOps Delivery:</strong> Architected seamless CI/CD using GitHub Actions and <strong>ArgoCD Image Updater</strong>.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span>
+<span class=""><strong>Traffic Management:</strong> Configured <strong>Traefik Ingress Controller</strong> on EKS.</span>
+</li>
+</ul>
+<div class="mt-auto">
+<p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack:</p>
+<div class="flex flex-wrap gap-2">
+<span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">React</span>
+<span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Node.js</span>
+<span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">PostgreSQL</span>
+<span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Docker</span>
+<span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Kustomize</span>
+<span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Helm/ArgoCD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Certifications -->
+<div>
+<h2 class="text-headline-md font-headline-md text-primary mb-2">Certifications</h2>
+<div class="section-divider"></div>
+<div class="space-y-4">
+<a class="block bento-card p-4 rounded group" href="#">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<span class="text-body-md font-body-md font-medium text-primary group-hover:text-secondary transition-colors">AWS Certified Solutions Architect – Associate</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px] group-hover:text-secondary transition-colors">arrow_outward</span>
+</div>
+</a>
+<a class="block bento-card p-4 rounded group" href="#">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<span class="text-body-md font-body-md font-medium text-primary group-hover:text-secondary transition-colors">AWS Certified Cloud Practitioner</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px] group-hover:text-secondary transition-colors">arrow_outward</span>
+</div>
+</a>
+<div class="bento-card p-4 rounded">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: &quot;FILL&quot; 1;">workspace_premium</span>
+<div>
+<span class="block text-body-md font-body-md font-medium text-primary">CCNP ENARSI(300-410)</span>
+<span class="block text-label-code font-label-code text-on-surface-variant">From Y_Technologies</span>
+</div>
+</div>
+</div>
+<div class="bento-card p-4 rounded">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: &quot;FILL&quot; 1;">workspace_premium</span>
+<div>
+<span class="block text-body-md font-body-md font-medium text-primary">Windows Server &amp; Linux System Administrator</span>
+<span class="block text-label-code font-label-code text-on-surface-variant">From Y_Technologies</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-inverse-surface border-t border-primary dark:border-primary-fixed-dim w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md max-w-container-max mx-auto px-margin-mobile py-section-gap">
+<div>
+<p class="text-body-lg font-headline-sm font-semibold text-primary dark:text-primary-fixed mb-2">Nyein Chan</p>
+<p class="text-body-md font-body-md text-on-surface dark:text-inverse-on-surface opacity-80">
+                    © 2024 Nyein Chan. DevOps Engineer. Built with Precision.
+                </p>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end items-center">
+<a class="text-label-code font-label-code text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-100 hover:opacity-80" href="#">LinkedIn</a>
+<a class="text-label-code font-label-code text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-100 hover:opacity-80" href="#">GitHub</a>
+<a class="text-label-code font-label-code text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-100 hover:opacity-80" href="#">Email</a>
+<a class="text-label-code font-label-code text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-100 hover:opacity-80" href="#">Contact</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>

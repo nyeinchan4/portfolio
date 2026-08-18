@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyein Chan — DevOps Engineer</title>
+  <meta name="description" content="Nyein Chan is a DevOps Engineer specialising in AWS cloud infrastructure, CI/CD pipelines, and scalable containerised deployments.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="/assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-surface border-b border-outline-variant w-full">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile h-16">
+      <a href="/" class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary hover:opacity-80 transition-opacity">Nyein Chan</a>
+      <div class="hidden md:flex space-x-gutter items-center">
+        <a href="/" class="text-body-md font-body-md text-primary border-b-2 border-primary pb-1">Home</a>
+        <a href="/projects/" class="nav-link text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors pb-1">Projects</a>
+        <a href="/blog/" class="nav-link text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors pb-1">Blog</a>
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="ml-4 px-4 py-2 bg-primary text-on-primary text-label-code font-label-code rounded hover:bg-secondary transition-colors flex items-center gap-2">
+          <span class="material-symbols-outlined" style="font-size:16px;">description</span>Resume
+        </a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-primary p-2" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant bg-surface px-margin-mobile pb-4 space-y-3 pt-3">
+      <a href="/" class="block text-body-md font-body-md text-primary font-semibold">Home</a>
+      <a href="/projects/" class="block text-body-md font-body-md text-on-surface-variant hover:text-primary">Projects</a>
+      <a href="/blog/" class="block text-body-md font-body-md text-on-surface-variant hover:text-primary">Blog</a>
+      <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-primary text-on-primary text-label-code font-label-code rounded hover:bg-secondary">Resume</a>
+    </div>
+  </nav>
+
+  <main class="max-w-container-max mx-auto px-margin-mobile pt-section-gap pb-section-gap flex-grow w-full">
+    <!-- Hero -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center mb-section-gap">
+      <div class="md:col-span-8 space-y-stack-gap-md">
+        <div class="inline-flex items-center space-x-2 bg-surface-container px-3 py-1 rounded-full text-label-code font-label-code text-on-surface-variant border border-outline-variant">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          <span>Available for new opportunities</span>
+        </div>
+        <h1 class="text-headline-lg-mobile md:text-display-lg font-headline-lg-mobile md:font-display-lg text-primary tracking-tight">
+          DevOps Engineer building scalable, resilient infrastructure.
+        </h1>
+        <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Results-oriented DevOps Engineer with 3+ years of experience managing cloud environments and deploying scalable applications. Migrated legacy systems to modern infrastructures, enhancing performance and reducing operational costs.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="mailto:mrnyeinchan55@gmail.com" class="inline-flex items-center space-x-2 text-body-md font-body-md text-primary hover:text-secondary transition-colors">
+            <span class="material-symbols-outlined text-[20px]">mail</span><span>mrnyeinchan55@gmail.com</span>
+          </a>
+          <span class="hidden md:inline text-outline-variant">|</span>
+          <a href="https://linkedin.com/in/nyein-chan-528758284" target="_blank" rel="noopener" class="inline-flex items-center space-x-2 text-body-md font-body-md text-primary hover:text-secondary transition-colors">
+            <span class="material-symbols-outlined text-[20px]">link</span><span>linkedin.com/in/nyein-chan-528758284</span>
+          </a>
+          <span class="hidden md:inline text-outline-variant">|</span>
+          <span class="inline-flex items-center space-x-2 text-body-md font-body-md text-on-surface-variant">
+            <span class="material-symbols-outlined text-[20px]">location_on</span><span>Yangon, Myanmar</span>
+          </span>
+        </div>
+      </div>
+      <div class="md:col-span-4 flex justify-center md:justify-end">
+        <div class="w-48 h-48 md:w-64 md:h-64 rounded bg-surface-container-high border border-outline-variant relative overflow-hidden group">
+          <div class="absolute inset-0 opacity-20" style="background-image:radial-gradient(#000 1px,transparent 1px);background-size:16px 16px;"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="material-symbols-outlined text-6xl text-primary opacity-50 group-hover:scale-110 transition-transform duration-500" style="font-variation-settings:'FILL' 1;">terminal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Skills -->
+    <section class="mb-section-gap" id="skills">
+      <h2 class="text-headline-md font-headline-md text-primary mb-2">Core Skills</h2>
+      <div class="section-divider"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-gap-md">
+        <div class="bento-card p-6 rounded flex flex-col h-full">
+          <div class="flex items-center space-x-3 mb-4 text-primary">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">cloud</span>
+            <h3 class="text-body-lg font-body-lg font-semibold">Cloud & Infrastructure</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AWS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">EKS / ECS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudFront</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">WAF</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ALB</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">RDS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AKS</span>
+          </div>
+        </div>
+        <div class="bento-card p-6 rounded flex flex-col h-full">
+          <div class="flex items-center space-x-3 mb-4 text-primary">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">account_tree</span>
+            <h3 class="text-body-lg font-body-lg font-semibold">CI/CD & Automation</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudFormation</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Ansible</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Docker</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Kubernetes</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">GitHub Actions</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AWS CodePipeline</span>
+          </div>
+        </div>
+        <div class="bento-card p-6 rounded flex flex-col h-full">
+          <div class="flex items-center space-x-3 mb-4 text-primary">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">monitoring</span>
+            <h3 class="text-body-lg font-body-lg font-semibold">Monitoring & Ops</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">NewRelic</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ELK Stack</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudWatch</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Problem-solving</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="mb-section-gap" id="experience">
+      <h2 class="text-headline-md font-headline-md text-primary mb-2">Professional Experience</h2>
+      <div class="space-y-8 mt-6">
+        <div>
+          <div class="section-divider"></div>
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+            <div>
+              <h3 class="text-headline-sm font-headline-sm text-primary font-bold">City Mart Holding Co., Ltd</h3>
+              <p class="text-body-lg font-body-lg text-on-surface-variant italic">DevOps Engineer</p>
+            </div>
+            <span class="text-label-code font-label-code text-on-tertiary-container mt-2 md:mt-0 bg-surface-container px-3 py-1 rounded">2023/02 – present</span>
+          </div>
+          <ul class="space-y-stack-gap-sm text-body-md font-body-md text-on-surface">
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span><span>Designed and implemented <strong>CI/CD pipelines</strong> using <strong>AWS CodePipeline</strong> and <strong>GitHub Actions</strong>, accelerating release cycles and enhancing deployment reliability.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span><span>Managed cloud infrastructure using <strong>CloudFront, ECS, RDS</strong>, Auto Scaling, <strong>WAF</strong>, ElastiCache, Route 53, and EventBridge.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span><span>Migrated applications from Elastic Beanstalk to ECS, achieving <strong>99.99% system availability</strong>.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span><span>Automated RDS scaling using EventBridge and <strong>Lambda</strong> to optimize database performance during peak traffic.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span><span>Migrated SAP Commerce from Azure VMs to <strong>VMSS</strong>, enabling auto-scaling and improving system reliability.</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="section-divider"></div>
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+            <div>
+              <h3 class="text-headline-sm font-headline-sm text-primary font-bold">Ferry Management System</h3>
+              <p class="text-body-lg font-body-lg text-on-surface-variant italic">Intern DevOps Engineer</p>
+            </div>
+          </div>
+          <ul class="space-y-stack-gap-sm text-body-md font-body-md text-on-surface">
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span><span>Set up and configured cloud infrastructure for the Ferry Management System.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">chevron_right</span><span>Utilised GitHub Actions for CI/CD pipelines and managed server configuration.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects & Certs -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-section-gap" id="projects">
+      <div>
+        <h2 class="text-headline-md font-headline-md text-primary mb-2">Notable Projects</h2>
+        <div class="section-divider"></div>
+        <div class="bento-card p-6 rounded h-full flex flex-col">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-body-lg font-body-lg font-bold text-primary">Lumina – Cloud-Native GitOps Project</h3>
+            <a href="/projects/" class="text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">open_in_new</span></a>
+          </div>
+          <ul class="space-y-3 text-body-md font-body-md text-on-surface mb-6">
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>IaC:</strong> Provisioned AWS environment (VPC, EKS, RDS) using <strong>CloudFormation</strong>.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>GitOps:</strong> CI/CD using GitHub Actions and <strong>ArgoCD Image Updater</strong>.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>Traffic:</strong> <strong>Traefik Ingress Controller</strong> on EKS.</span></li>
+          </ul>
+          <div class="mt-auto">
+            <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack:</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">React</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Node.js</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">PostgreSQL</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Docker</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Helm/ArgoCD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-headline-md font-headline-md text-primary mb-2">Certifications</h2>
+        <div class="section-divider"></div>
+        <div class="space-y-4">
+          <a href="#" class="block bento-card p-4 rounded group">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center space-x-3">
+                <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">verified</span>
+                <span class="text-body-md font-body-md font-medium text-primary group-hover:text-secondary transition-colors">AWS Certified Solutions Architect – Associate</span>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant text-[16px] group-hover:text-secondary transition-colors">arrow_outward</span>
+            </div>
+          </a>
+          <a href="#" class="block bento-card p-4 rounded group">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center space-x-3">
+                <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">verified</span>
+                <span class="text-body-md font-body-md font-medium text-primary group-hover:text-secondary transition-colors">AWS Certified Cloud Practitioner</span>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant text-[16px] group-hover:text-secondary transition-colors">arrow_outward</span>
+            </div>
+          </a>
+          <div class="bento-card p-4 rounded">
+            <div class="flex items-center space-x-3">
+              <span class="material-symbols-outlined text-outline" style="font-variation-settings:'FILL' 1;">workspace_premium</span>
+              <div>
+                <span class="block text-body-md font-body-md font-medium text-primary">CCNP ENARSI (300-410)</span>
+                <span class="block text-label-code font-label-code text-on-surface-variant">From Y_Technologies</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-card p-4 rounded">
+            <div class="flex items-center space-x-3">
+              <span class="material-symbols-outlined text-outline" style="font-variation-settings:'FILL' 1;">workspace_premium</span>
+              <div>
+                <span class="block text-body-md font-body-md font-medium text-primary">Windows Server & Linux Sysadmin</span>
+                <span class="block text-label-code font-label-code text-on-surface-variant">From Y_Technologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-primary w-full mt-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md max-w-container-max mx-auto px-margin-mobile py-12">
+      <div>
+        <p class="text-body-lg font-headline-sm font-semibold text-primary mb-2">Nyein Chan</p>
+        <p class="text-body-md font-body-md text-on-surface opacity-80">© 2024 Nyein Chan. DevOps Engineer. Built with Precision.</p>
+      </div>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end items-center">
+        <a href="https://linkedin.com/in/nyein-chan-528758284" target="_blank" rel="noopener" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">LinkedIn</a>
+        <a href="https://github.com/nyeinchan4" target="_blank" rel="noopener" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">GitHub</a>
+        <a href="mailto:mrnyeinchan55@gmail.com" class="text-label-code font-label-code text-on-surface-variant hover:text-secondary transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
