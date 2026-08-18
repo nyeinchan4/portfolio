@@ -55,7 +55,7 @@
           <div>
             <h2 class="text-headline-sm font-headline-sm flex items-center gap-2">
               Lumina – Cloud-Native GitOps Project
-              <a href="https://github.com/nyeinchan4" target="_blank" rel="noopener" aria-label="View Project" class="text-on-surface-variant hover:text-secondary transition-colors">
+              <a href="https://github.com/nyeinchan4/lumina" target="_blank" rel="noopener" aria-label="View Project" class="text-on-surface-variant hover:text-secondary transition-colors">
                 <span class="material-symbols-outlined text-[20px]">open_in_new</span>
               </a>
             </h2>
@@ -70,7 +70,7 @@
             <div class="text-primary mt-1"><span class="material-symbols-outlined">dns</span></div>
             <div>
               <h3 class="font-bold text-body-md font-body-md mb-1">Infrastructure as Code</h3>
-              <p class="text-body-md font-body-md text-on-surface-variant">Provisioned a production-ready AWS environment (VPC, EKS, RDS) using <strong class="text-on-surface">AWS CloudFormation</strong>, ensuring network isolation and high availability.</p>
+              <p class="text-body-md font-body-md text-on-surface-variant">Provisioned a production-ready AWS environment (VPC, EKS, RDS) using <strong class="text-on-surface">Terraform modules</strong>, ensuring network isolation and high availability.</p>
             </div>
           </div>
           <div class="flex gap-4">
@@ -105,7 +105,7 @@
             <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Kubernetes (Kustomize)</span>
             <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Helm</span>
             <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">ArgoCD</span>
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">AWS CloudFormation</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Terraform</span>
             <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">EKS</span>
           </div>
         </div>
@@ -117,7 +117,7 @@
           <div>
             <h2 class="text-headline-sm font-headline-sm flex items-center gap-2">
               Food Fusion – Cloud-Native E-Commerce
-              <a href="https://github.com/nyeinchan4" target="_blank" rel="noopener" aria-label="View Project" class="text-on-surface-variant hover:text-secondary transition-colors">
+              <a href="https://github.com/nyeinchan4/food-fusion" target="_blank" rel="noopener" aria-label="View Project" class="text-on-surface-variant hover:text-secondary transition-colors">
                 <span class="material-symbols-outlined text-[20px]">open_in_new</span>
               </a>
             </h2>
@@ -158,43 +158,65 @@
         </div>
       </article>
 
-      <!-- Project 3: This Portfolio -->
+      <!-- Project 3: ApexFit -->
       <article class="bento-card p-6 md:p-8 rounded-lg">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
           <div>
-            <h2 class="text-headline-sm font-headline-sm">Portfolio Site – Serverless Static Hosting</h2>
-            <p class="text-body-md font-body-md text-on-surface-variant mt-1">This site — zero-server, globally distributed, near-zero cost.</p>
+            <h2 class="text-headline-sm font-headline-sm flex items-center gap-2">
+              ApexFit – Microservices Fitness Platform
+              <a href="https://github.com/nyeinchan4/ApexFit" target="_blank" rel="noopener" aria-label="View Project" class="text-on-surface-variant hover:text-secondary transition-colors">
+                <span class="material-symbols-outlined text-[20px]">open_in_new</span>
+              </a>
+            </h2>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">Cloud-native fitness platform on K3s with GitOps, Helm, and full observability.</p>
           </div>
           <div class="flex items-center gap-2 text-label-code font-label-code text-on-surface-variant bg-surface-container py-1 px-3 rounded-full">
-            <span class="w-2 h-2 rounded-full bg-green-500"></span>Live
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>In Progress
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div class="flex gap-4">
-            <div class="text-primary mt-1"><span class="material-symbols-outlined">storage</span></div>
+            <div class="text-primary mt-1"><span class="material-symbols-outlined">account_tree</span></div>
             <div>
-              <h3 class="font-bold text-body-md font-body-md mb-1">S3 + CloudFront</h3>
-              <p class="text-body-md font-body-md text-on-surface-variant">Private S3 buckets with <strong class="text-on-surface">CloudFront OAC</strong> serving HTML, CSS, JS, and blog Markdown files with per-path cache policies.</p>
+              <h3 class="font-bold text-body-md font-body-md mb-1">GitOps Delivery</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant"><strong class="text-on-surface">ArgoCD</strong> watches the Git repo and reconciles three Helm charts — database, backend (4 services), and frontend (2 React SPAs) — into a single <strong class="text-on-surface">K3s cluster</strong>.</p>
             </div>
           </div>
           <div class="flex gap-4">
-            <div class="text-primary mt-1"><span class="material-symbols-outlined">key</span></div>
+            <div class="text-primary mt-1"><span class="material-symbols-outlined">settings_input_component</span></div>
             <div>
-              <h3 class="font-bold text-body-md font-body-md mb-1">Keyless Deploy via OIDC</h3>
-              <p class="text-body-md font-body-md text-on-surface-variant">GitHub Actions assumes an IAM role via <strong class="text-on-surface">OIDC</strong> — no long-lived AWS credentials stored anywhere.</p>
+              <h3 class="font-bold text-body-md font-body-md mb-1">Microservices Architecture</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant">API Gateway routes requests to <strong class="text-on-surface">User, Membership, and Admin services</strong>. Shared Kubernetes Secret manages JWT and DB credentials across all backend pods.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="text-primary mt-1"><span class="material-symbols-outlined">monitoring</span></div>
+            <div>
+              <h3 class="font-bold text-body-md font-body-md mb-1">Observability Stack</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant"><strong class="text-on-surface">Prometheus</strong> scrapes cluster and pod metrics; <strong class="text-on-surface">Grafana</strong> provides dashboards for cluster, pod, and service-level visibility.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="text-primary mt-1"><span class="material-symbols-outlined">dns</span></div>
+            <div>
+              <h3 class="font-bold text-body-md font-body-md mb-1">Infrastructure as Code</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant">All workloads are packaged as <strong class="text-on-surface">Helm charts</strong> with environment-specific <code>values-dev.yaml</code> overrides. PostgreSQL runs as a StatefulSet using the Bitnami chart.</p>
             </div>
           </div>
         </div>
         <div class="border-t border-outline-variant pt-6">
           <h4 class="text-label-code font-label-code uppercase tracking-wider text-on-surface-variant mb-3">Tech Stack</h4>
           <div class="flex flex-wrap gap-2">
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">HTML / CSS / JS</span>
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">S3</span>
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">CloudFront</span>
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">ACM</span>
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Route 53</span>
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">CloudFormation</span>
-            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">GitHub Actions OIDC</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">React (Admin Portal + Member App)</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Node.js (Microservices)</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">PostgreSQL</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Docker</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Kubernetes (K3s)</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Helm</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">ArgoCD</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">GitHub Actions</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Prometheus</span>
+            <span class="tech-chip bg-surface-container-low border border-outline-variant text-label-code font-label-code px-3 py-1 rounded">Grafana</span>
           </div>
         </div>
       </article>
