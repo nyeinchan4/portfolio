@@ -178,50 +178,38 @@
         <h2 class="text-headline-md font-headline-md text-primary mb-2">Notable Projects</h2>
         <div class="section-divider"></div>
         <div class="bento-card p-6 rounded h-full flex flex-col">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-body-lg font-body-lg font-bold text-primary">Lumina – Cloud-Native GitOps Project</h3>
-            <a href="https://github.com/nyeinchan4/lumina" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">open_in_new</span></a>
-          </div>
-          <ul class="space-y-3 text-body-md font-body-md text-on-surface mb-6">
-            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>IaC:</strong> Provisioned production-ready AWS environment (VPC, EKS, RDS) using <strong>Terraform modules</strong>, ensuring network isolation and high availability.</span></li>
-            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>GitOps Delivery:</strong> Architected a seamless CI/CD pipeline using GitHub Actions and <strong>ArgoCD Image Updater</strong> via a "Push-to-Deploy" workflow.</span></li>
-            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>Traffic Management:</strong> Configured <strong>Traefik Ingress Controller</strong> on EKS to manage external access and routing for containerized microservices.</span></li>
-          </ul>
-          <div class="mt-auto">
-            <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">React</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Node.js</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">PostgreSQL</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Docker</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Helm/ArgoCD</span>
-            </div>
+          <a href="/projects/" class="text-body-lg font-body-lg font-bold text-primary hover:text-secondary transition-colors mb-4 inline-block">Lumina – Cloud-Native GitOps Project</a>
+          <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">React</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Node.js</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">PostgreSQL (RDS)</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Docker</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Kubernetes (Kustomize)</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Helm</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">ArgoCD</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Terraform</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">EKS</span>
           </div>
         </div>
 
         <!-- Food Fusion -->
         <div class="bento-card p-6 rounded flex flex-col mt-6">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-body-lg font-body-lg font-bold text-primary">Food Fusion – Cloud-Native E-Commerce</h3>
-            <a href="https://github.com/nyeinchan4/food-fusion" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">open_in_new</span></a>
-          </div>
-          <ul class="space-y-3 text-body-md font-body-md text-on-surface mb-6">
-            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>IaC:</strong> Deployed full AWS stack (VPC, ECS Fargate, RDS, ALB, ECR, S3) via a single <strong>CloudFormation</strong> template.</span></li>
-            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>CI/CD:</strong> Keyless deployments using <strong>GitHub Actions OIDC</strong> — no long-lived AWS credentials stored anywhere.</span></li>
-            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>Service Discovery:</strong> Nginx proxies to PHP-FPM backend via <strong>AWS Cloud Map</strong> private DNS — no internal ALB needed.</span></li>
-          </ul>
-          <div class="mt-auto">
-            <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack:</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Laravel / PHP</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">React / Vite</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">ECS Fargate</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">CloudFormation</span>
-              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">GitHub Actions</span>
-            </div>
-            <a href="/blog/post/?slug=food-fusion-aws-ecs-deployment" class="inline-flex items-center gap-1 text-label-code font-label-code text-secondary hover:text-primary transition-colors">
-              <span class="material-symbols-outlined text-[14px]">article</span>Read step-by-step deployment guide
-            </a>
+          <a href="/projects/" class="text-body-lg font-body-lg font-bold text-primary hover:text-secondary transition-colors mb-4 inline-block">Food Fusion – Cloud-Native E-Commerce</a>
+          <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Laravel (PHP)</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">React (Vite)</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">ECS Fargate</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">CloudFormation</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">GitHub Actions OIDC</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">RDS MySQL</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">ALB</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">AWS Cloud Map</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">SSM Parameter Store</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">ACM</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">ECR</span>
+            <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">S3</span>
           </div>
         </div>
       </div>
