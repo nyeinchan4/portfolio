@@ -172,12 +172,13 @@
       </div>
     </section>
 
-    <!-- Projects & Certs -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-section-gap" id="projects">
-      <div>
-        <h2 class="text-headline-md font-headline-md text-primary mb-2">Notable Projects</h2>
-        <div class="section-divider"></div>
-        <div class="bento-card p-6 rounded h-full flex flex-col">
+    <!-- Notable Projects — full width -->
+    <section class="mb-section-gap" id="projects">
+      <h2 class="text-headline-md font-headline-md text-primary mb-2">Notable Projects</h2>
+      <div class="section-divider"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <!-- Lumina -->
+        <div class="bento-card p-6 rounded flex flex-col">
           <a href="/projects/" class="text-body-lg font-body-lg font-bold text-primary hover:text-secondary transition-colors mb-4 inline-block">Lumina – Cloud-Native GitOps Project</a>
           <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack</p>
           <div class="flex flex-wrap gap-2">
@@ -192,9 +193,8 @@
             <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">EKS</span>
           </div>
         </div>
-
         <!-- Food Fusion -->
-        <div class="bento-card p-6 rounded flex flex-col mt-6">
+        <div class="bento-card p-6 rounded flex flex-col">
           <a href="/projects/" class="text-body-lg font-body-lg font-bold text-primary hover:text-secondary transition-colors mb-4 inline-block">Food Fusion – Cloud-Native E-Commerce</a>
           <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack</p>
           <div class="flex flex-wrap gap-2">
@@ -213,6 +213,11 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Certifications + Education same level -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-section-gap" id="certs-education">
+      <!-- Certifications -->
       <div>
         <h2 class="text-headline-md font-headline-md text-primary mb-2">Certifications</h2>
         <div class="section-divider"></div>
@@ -248,53 +253,53 @@
             <div class="flex items-center space-x-3">
               <span class="material-symbols-outlined text-outline" style="font-variation-settings:'FILL' 1;">workspace_premium</span>
               <div>
-                <span class="block text-body-md font-body-md font-medium text-primary">Windows Server & Linux Sysadmin</span>
+                <span class="block text-body-md font-body-md font-medium text-primary">Windows Server &amp; Linux Sysadmin</span>
                 <span class="block text-label-code font-label-code text-on-surface-variant">From Y_Technologies</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Education & Languages -->
-    <section class="mb-section-gap" id="education">
-      <h2 class="text-headline-md font-headline-md text-primary mb-2">Education & Languages</h2>
-      <div class="section-divider"></div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md">
-        <div class="bento-card p-6 rounded">
-          <div class="flex items-center space-x-3 mb-4 text-primary">
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">school</span>
-            <h3 class="text-body-lg font-body-lg font-semibold">Education</h3>
-          </div>
-          <div class="space-y-4">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-              <div>
-                <p class="text-body-md font-body-md font-semibold text-primary">B.Sc. Computer Science</p>
-                <p class="text-label-code font-label-code text-on-surface-variant mt-0.5">University of the People (UoPeople)</p>
-              </div>
-              <span class="text-label-code font-label-code text-secondary mt-2 md:mt-0 bg-secondary-fixed px-3 py-1 rounded">In Progress · 2026</span>
+      <!-- Education & Languages -->
+      <div id="education">
+        <h2 class="text-headline-md font-headline-md text-primary mb-2">Education &amp; Languages</h2>
+        <div class="section-divider"></div>
+        <div class="space-y-4">
+          <div class="bento-card p-6 rounded">
+            <div class="flex items-center space-x-3 mb-4 text-primary">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">school</span>
+              <h3 class="text-body-lg font-body-lg font-semibold">Education</h3>
             </div>
-            <div class="border-t border-outline-variant pt-4 flex flex-col md:flex-row justify-between items-start md:items-center">
-              <div>
-                <p class="text-body-md font-body-md font-semibold text-primary">Bachelor of Arts (BA), Geography</p>
+            <div class="space-y-4">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                  <p class="text-body-md font-body-md font-semibold text-primary">B.Sc. Computer Science</p>
+                  <p class="text-label-code font-label-code text-on-surface-variant mt-0.5">University of the People (UoPeople)</p>
+                </div>
+                <span class="text-label-code font-label-code text-secondary mt-2 md:mt-0 bg-secondary-fixed px-3 py-1 rounded">In Progress · 2026</span>
               </div>
-              <span class="text-label-code font-label-code text-on-tertiary-container mt-2 md:mt-0 bg-surface-container px-3 py-1 rounded">2022 – 2026</span>
+              <div class="border-t border-outline-variant pt-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                  <p class="text-body-md font-body-md font-semibold text-primary">Bachelor of Arts (BA), Geography</p>
+                </div>
+                <span class="text-label-code font-label-code text-on-tertiary-container mt-2 md:mt-0 bg-surface-container px-3 py-1 rounded">2022 – 2026</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="bento-card p-6 rounded">
-          <div class="flex items-center space-x-3 mb-3 text-primary">
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">translate</span>
-            <h3 class="text-body-lg font-body-lg font-semibold">Languages</h3>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-body-md font-body-md font-semibold text-primary">English</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Intermediate</span>
-          </div>
-          <div class="flex items-center gap-3 mt-3">
-            <span class="text-body-md font-body-md font-semibold text-primary">Burmese</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Native</span>
+          <div class="bento-card p-6 rounded">
+            <div class="flex items-center space-x-3 mb-3 text-primary">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">translate</span>
+              <h3 class="text-body-lg font-body-lg font-semibold">Languages</h3>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-body-md font-body-md font-semibold text-primary">English</span>
+              <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Intermediate</span>
+            </div>
+            <div class="flex items-center gap-3 mt-3">
+              <span class="text-body-md font-body-md font-semibold text-primary">Burmese</span>
+              <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Native</span>
+            </div>
           </div>
         </div>
       </div>
