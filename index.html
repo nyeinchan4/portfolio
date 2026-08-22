@@ -198,6 +198,32 @@
             </div>
           </div>
         </div>
+
+        <!-- Food Fusion -->
+        <div class="bento-card p-6 rounded flex flex-col mt-6">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-body-lg font-body-lg font-bold text-primary">Food Fusion – Cloud-Native E-Commerce</h3>
+            <a href="https://github.com/nyeinchan4/food-fusion" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">open_in_new</span></a>
+          </div>
+          <ul class="space-y-3 text-body-md font-body-md text-on-surface mb-6">
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>IaC:</strong> Deployed full AWS stack (VPC, ECS Fargate, RDS, ALB, ECR, S3) via a single <strong>CloudFormation</strong> template.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>CI/CD:</strong> Keyless deployments using <strong>GitHub Actions OIDC</strong> — no long-lived AWS credentials stored anywhere.</span></li>
+            <li class="flex items-start"><span class="material-symbols-outlined text-outline-variant mr-2 text-[16px] mt-1">terminal</span><span><strong>Service Discovery:</strong> Nginx proxies to PHP-FPM backend via <strong>AWS Cloud Map</strong> private DNS — no internal ALB needed.</span></li>
+          </ul>
+          <div class="mt-auto">
+            <p class="text-label-code font-label-code text-on-surface-variant mb-2 font-bold">Tech Stack:</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">Laravel / PHP</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">React / Vite</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">ECS Fargate</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">CloudFormation</span>
+              <span class="tech-chip px-2 py-1 text-xs rounded text-on-surface">GitHub Actions</span>
+            </div>
+            <a href="/blog/post/?slug=food-fusion-aws-ecs-deployment" class="inline-flex items-center gap-1 text-label-code font-label-code text-secondary hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-[14px]">article</span>Read step-by-step deployment guide
+            </a>
+          </div>
+        </div>
       </div>
       <div>
         <h2 class="text-headline-md font-headline-md text-primary mb-2">Certifications</h2>
