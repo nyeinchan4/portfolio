@@ -80,53 +80,80 @@
     <section class="mb-section-gap" id="skills">
       <h2 class="text-headline-md font-headline-md text-primary mb-2">Core Skills</h2>
       <div class="section-divider"></div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-gap-md">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-stack-gap-md">
+
         <div class="bento-card p-6 rounded flex flex-col h-full">
           <div class="flex items-center space-x-3 mb-4 text-primary">
             <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">cloud</span>
-            <h3 class="text-body-lg font-body-lg font-semibold">Cloud & Infrastructure</h3>
+            <h3 class="text-body-lg font-body-lg font-semibold">Cloud &amp; AWS</h3>
           </div>
           <div class="flex flex-wrap gap-2 mt-auto">
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AWS</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">EKS / ECS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ECS Fargate</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">EKS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">RDS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ALB</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ECR</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudFormation</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">S3</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ACM</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">SSM</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Cloud Map</span>
             <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudFront</span>
             <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">WAF</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ALB</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">RDS</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AKS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Route 53</span>
             <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ElastiCache</span>
           </div>
         </div>
+
+        <div class="bento-card p-6 rounded flex flex-col h-full">
+          <div class="flex items-center space-x-3 mb-4 text-primary">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">deployed_code</span>
+            <h3 class="text-body-lg font-body-lg font-semibold">Containers &amp; K8s</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Docker</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Kubernetes</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">K3s</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Kustomize</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Helm</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Traefik</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">AKS</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Nginx</span>
+          </div>
+        </div>
+
         <div class="bento-card p-6 rounded flex flex-col h-full">
           <div class="flex items-center space-x-3 mb-4 text-primary">
             <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">account_tree</span>
-            <h3 class="text-body-lg font-body-lg font-semibold">CI/CD & Automation</h3>
+            <h3 class="text-body-lg font-body-lg font-semibold">CI/CD &amp; GitOps</h3>
           </div>
           <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">GitHub Actions</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">OIDC (keyless)</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ArgoCD</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Image Updater</span>
             <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Terraform</span>
             <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Ansible</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Docker</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Kubernetes</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">GitHub Actions</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudFormation</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Scripting</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Infra Automation</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Bash Scripting</span>
           </div>
         </div>
+
         <div class="bento-card p-6 rounded flex flex-col h-full">
           <div class="flex items-center space-x-3 mb-4 text-primary">
             <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">monitoring</span>
-            <h3 class="text-body-lg font-body-lg font-semibold">Monitoring & Ops</h3>
+            <h3 class="text-body-lg font-body-lg font-semibold">Monitoring &amp; Ops</h3>
           </div>
           <div class="flex flex-wrap gap-2 mt-auto">
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">NewRelic</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ELK Stack</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Prometheus</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Grafana</span>
             <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">CloudWatch</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Problem-solving</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Continuous Improvement</span>
-            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Agile</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">New Relic</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">ELK Stack</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">EventBridge</span>
+            <span class="tech-chip px-2 py-1 rounded text-label-code font-label-code text-on-surface">Lambda</span>
           </div>
         </div>
+
       </div>
     </section>
 
